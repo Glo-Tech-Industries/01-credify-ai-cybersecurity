@@ -1,0 +1,2 @@
+# AASA Dependencies
+typing-extensions>=4.0.0
