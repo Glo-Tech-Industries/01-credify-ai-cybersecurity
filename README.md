@@ -6,11 +6,19 @@ As enterprises adopt generative AI, traditional perimeter defenses fail to inspe
 
 ---
 
-## Key Features
-* **Context-Aware Named Entity Redaction:** Intercepts sensitive entities using local NLP model rules.
-* **Indirect Prompt Injection Scanning:** Filters malicious embedded directives inside prompt payloads.
-* **Zero-Knowledge SIEM Hashing:** Generates cryptographic hashes for compliance logging without offsite plain-text storage.
+## Key Features & System Architecture
+* **Context-Aware Named Entity Redaction:** Intercepts sensitive entities using local regex and rule-based NLP.
+* **Indirect Prompt Injection Scanning:** Filters malicious embedded directives inside prompt payloads before execution.
+* **Zero-Knowledge SIEM Hashing:** Generates cryptographic SHA-256 hashes for compliance logging without offsite plain-text storage.
 * **Client-Side Detokenization:** Transparently restores context for the end user.
+
+---
+
+## Technologies Used
+* **Python 3.9+** (Core gateway proxy logic & unit testing framework)
+* **Regex / Native String Manipulation** (Fast pattern matching for PII & threat detection)
+* **Hashlib (SHA-256)** (Zero-knowledge cryptographic audit logging)
+* **GitHub** (Version control and project hosting)
 
 ---
 
